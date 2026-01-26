@@ -1,7 +1,9 @@
 # Init
 ```bash
 npm init -y
+npm install
 ```
+
 # Debug using ELECTRON
 ```bash
 npm run start:desktop
@@ -33,7 +35,7 @@ keytool -genkeypair -v -keystore helloworld.keystore -alias helloworld -keyalg R
 > 確認: yes [Enter]
 ```
 
-Step 2: Building a Signed APK
+## Step 2: Building a Signed APK
 ```
 cd android
 ./gradlew clean
@@ -45,6 +47,4 @@ apksigner sign --ks helloworld.keystore --ks-key-alias helloworld --out app/buil
 > Keystore password for signer #1: testpass
 
 apksigner verify --verbose app/build/outputs/apk/release/HelloWorld.apk
-
-
 ```
