@@ -1,0 +1,22 @@
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "description": "Electron + Capacitor HelloWorld",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start:desktop": "npm run start",
+    "build:mobile:android": "npx cap sync android && npx cap open android"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^40.0.0"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.1",
+    "@capacitor/cli": "^6.2.1",
+    "@capacitor/core": "^6.2.1"
+  }
+}

@@ -1,0 +1,38 @@
+# =========================
+# sample1_HelloWorld
+# =========================
+
+# Node / npm
+sample1_HelloWorld/node_modules/
+sample1_HelloWorld/npm-debug.log*
+sample1_HelloWorld/yarn-debug.log*
+sample1_HelloWorld/yarn-error.log*
+sample1_HelloWorld/pnpm-debug.log*
+
+# Electron
+sample1_HelloWorld/dist/
+sample1_HelloWorld/out/
+
+# Capacitor / Android（毎回生成するため丸ごと除外）
+sample1_HelloWorld/android/
+
+# APK / AAB / Signing
+sample1_HelloWorld/**/*.apk
+sample1_HelloWorld/**/*.aab
+sample1_HelloWorld/**/*.keystore
+sample1_HelloWorld/**/*.jks
+
+# =========================
+# IDE / OS (global)
+# =========================
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# =========================
+# Logs
+# =========================
+*.log
