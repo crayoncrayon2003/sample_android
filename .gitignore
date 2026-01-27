@@ -1,4 +1,19 @@
 # =========================
+# IDE / OS (global)
+# =========================
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
 # sample1_HelloWorld
 # =========================
 
@@ -23,16 +38,29 @@ sample1_HelloWorld/**/*.keystore
 sample1_HelloWorld/**/*.jks
 
 # =========================
-# IDE / OS (global)
+# sample2_Piano
 # =========================
-.idea/
-.vscode/
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
 
-# =========================
-# Logs
-# =========================
-*.log
+# Node / npm
+sample2_Piano/node_modules/
+sample2_Piano/npm-debug.log*
+sample2_Piano/yarn-debug.log*
+sample2_Piano/yarn-error.log*
+sample2_Piano/pnpm-debug.log*
+
+# Electron
+sample2_Piano/dist/
+sample2_Piano/out/
+
+# Capacitor / Android（毎回生成するため丸ごと除外）
+sample2_Piano/android/
+
+# Python
+sample2_Piano/www/sounds/env/
+sample2_Piano/www/sounds/*.wav
+
+# APK / AAB / Signing
+sample2_Piano/**/*.apk
+sample2_Piano/**/*.aab
+sample2_Piano/**/*.keystore
+sample2_Piano/**/*.jks

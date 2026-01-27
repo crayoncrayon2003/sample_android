@@ -90,6 +90,9 @@ snap list android-studio
 ```
 
 ### Setting Environment variables
+```
+sudo vim ~/.bashrc
+```
 
 ```bash
 # Andoroid Studio
@@ -129,3 +132,7 @@ check the location of the Android SDK
 
 `File` > `Settings` > `Appearance & Behavior` > `System Settings` > `Android SDK`
 
+## Android Build Tools
+```bash
+sudo apt install google-android-build-tools-34.0.0-installer
+```
