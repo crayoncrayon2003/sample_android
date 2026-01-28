@@ -1,6 +1,5 @@
 # Init
 ```bash
-npm init -y
 npm install
 ```
 
@@ -36,7 +35,7 @@ keytool -genkeypair -v -keystore helloworld.keystore -alias helloworld -keyalg R
 ```
 
 ## Step 2: Building a Signed APK
-```
+```bash
 cd android
 ./gradlew clean
 ./gradlew assembleRelease

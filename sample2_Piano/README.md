@@ -1,6 +1,7 @@
 # Generate Sound
 1. Creating Virtual Environment
 ```bash
+$ cd www/sounds
 $ python -m venv env
 ```
 
@@ -13,7 +14,6 @@ $ source env/bin/activate
 
 3. Generate Sound
 ```bash
-(env) $ cd www/sounds
 (env) $ python GeneratePiano.py
 ```
 
@@ -30,7 +30,6 @@ $ rm -rf env
 
 # Init
 ```bash
-npm init -y
 npm install
 ```
 
@@ -66,7 +65,7 @@ keytool -genkeypair -v -keystore piano.keystore -alias piano -keyalg RSA -keysiz
 ```
 
 ## Step 2: Building a Signed APK
-```
+```bash
 cd android
 ./gradlew clean
 ./gradlew assembleRelease
