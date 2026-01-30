@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Hiragino Sans', 'Meiryo', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 32px;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* サーバIP設定エリア */
+.server-config {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  background: rgba(255,255,255,0.95);
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.server-config label {
+  color: #764ba2;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.server-config input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.server-config input:focus {
+  border-color: #764ba2;
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.save-btn:active {
+  transform: translateY(0);
+}
+
+/* 蝶ネクタイコンテナ */
+.bowtie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: -10px;
+  margin-bottom: 30px;
+  position: relative;
+  height: 180px;
+}
+
+/* 蝶の羽部分（三角形） */
+.bowtie-wing {
+  width: 0;
+  height: 0;
+  position: relative;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.3));
+}
+
+.left-wing {
+  border-top: 90px solid transparent;
+  border-bottom: 90px solid transparent;
+  border-right: 140px solid #e74c3c;
+  margin-right: -5px;
+  z-index: 1;
+}
+
+.right-wing {
+  border-top: 90px solid transparent;
+  border-bottom: 90px solid transparent;
+  border-left: 140px solid #e74c3c;
+  margin-left: -5px;
+  z-index: 1;
+}
+
+/* 羽のボタン */
+.wing-button {
+  position: absolute;
+  background: rgba(255,255,255,0.2);
+  border: 3px solid white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2;
+}
+
+.left-wing .wing-button {
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right-wing .wing-button {
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.wing-button span {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.wing-button:hover:not(:disabled) {
+  background: rgba(255,255,255,0.4);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.left-wing .wing-button:hover:not(:disabled) {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.right-wing .wing-button:hover:not(:disabled) {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.wing-button:active:not(:disabled) {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.wing-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 中央の結び目（ひし形） */
+.bowtie-knot {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  z-index: 10;
+  position: relative;
+  margin: 0 10px;
+}
+
+/* ヘルスチェックボタン */
+.health-button {
+  background: rgba(255,255,255,0.3);
+  border: 3px solid white;
+  width: 55px;
+  height: 55px;
+  border-radius: 8px;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-45deg);
+}
+
+.health-button:hover {
+  background: rgba(255,255,255,0.5);
+  transform: rotate(-45deg) scale(1.05);
+}
+
+.health-button:active {
+  transform: rotate(-45deg) scale(0.95);
+}
+
+/* サーバー健康チェック結果 */
+#healthStatus {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 20px;
+  min-height: 28px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* 読み上げテキストボックス */
+.text-display {
+  margin-bottom: 20px;
+}
+
+.text-display textarea {
+  width: 100%;
+  min-height: 140px;
+  padding: 18px;
+  border-radius: 15px;
+  border: none;
+  resize: none;
+  font-size: 16px;
+  line-height: 1.6;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  background: white;
+  font-family: 'Hiragino Sans', 'Meiryo', sans-serif;
+}
+
+.text-display textarea:focus {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .server-config {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 15px;
+  }
+
+  .server-config input {
+    width: 100%;
+  }
+
+  .bowtie-container {
+    height: 140px;
+  }
+
+  .left-wing {
+    border-top: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+    border-right: 110px solid #e74c3c;
+  }
+
+  .right-wing {
+    border-top: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+    border-left: 110px solid #e74c3c;
+  }
+
+  .wing-button {
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+  }
+
+  .wing-button span {
+    font-size: 11px;
+  }
+
+  .left-wing .wing-button {
+    right: 20px;
+  }
+
+  .right-wing .wing-button {
+    left: 20px;
+  }
+
+  .bowtie-knot {
+    width: 55px;
+    height: 55px;
+  }
+
+  .health-button {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+
+  .text-display textarea {
+    min-height: 120px;
+    padding: 15px;
+  }
+}

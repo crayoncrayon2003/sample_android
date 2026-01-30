@@ -1,0 +1,6 @@
+{
+  "appId": "jp.example.sample3bowtie",
+  "appName": "BowTie",
+  "webDir": "frontend",
+  "bundledWebRuntime": false
+}

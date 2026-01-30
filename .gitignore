@@ -2,6 +2,7 @@
 # IDE / OS (global)
 # =========================
 .idea/
+.metals/
 .vscode/
 .DS_Store
 Thumbs.db
@@ -64,3 +65,47 @@ sample2_Piano/**/*.apk
 sample2_Piano/**/*.aab
 sample2_Piano/**/*.keystore
 sample2_Piano/**/*.jks
+
+
+
+# =========================
+# sample3_BowTie
+# =========================
+
+# Node / npm
+sample3_BowTie/node_modules/
+sample3_BowTie/model-ja/
+sample3_BowTie/npm-debug.log*
+sample3_BowTie/yarn-debug.log*
+sample3_BowTie/yarn-error.log*
+sample3_BowTie/pnpm-debug.log*
+
+# voicevox
+sample3_BowTie/voicevox
+
+# Electron
+sample3_BowTie/electron/node_modules/
+
+# Capacitor / Android（This folder is generally excluded.）
+sample3_BowTie/android/*
+
+# Capacitor / Android（However, customized files are saved.）
+!sample3_BowTie/android/app/src/main/AndroidManifest.xml
+!sample3_BowTie/android/app/src/main/res/xml/network_security_config.xml
+
+# --- main 以下の他のファイルは再度 ignore（必要に応じて追加） ---
+sample3_BowTie/android/app/src/main/*
+sample3_BowTie/android/app/src/main/res/xml/*
+
+# Python
+sample3_BowTie/backend/__pycache__/
+sample3_BowTie/backend/env/
+sample3_BowTie/backend/*.wav
+
+# APK / AAB / Signing
+sample3_BowTie/**/*.apk
+sample3_BowTie/**/*.aab
+sample3_BowTie/**/*.keystore
+sample3_BowTie/**/*.jks
+
+sample3_BowTie_bk/

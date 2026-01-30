@@ -1,0 +1,11 @@
+{
+  "name": "zundamon-electron",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start:desktop": "electron . --disable-gpu --disable-software-rasterizer"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0"
+  }
+}

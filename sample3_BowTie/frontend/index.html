@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>BowTie Voice App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app-container">
+    <h1>🎀</h1>
+
+    <!-- サーバIP設定エリア -->
+    <div class="server-config">
+      <label for="serverIp">サーバIP:</label>
+      <input type="text" id="serverIp" placeholder="192.168.0.5" />
+      <button id="saveIpBtn" class="save-btn">保存</button>
+    </div>
+
+    <!-- 蝶ネクタイデザイン -->
+    <div class="bowtie-container">
+      <!-- 左側の蝶（三角形） -->
+      <div class="bowtie-wing left-wing">
+        <button id="voiceBtn" class="wing-button">
+          🎤<br><span>話す</span>
+        </button>
+      </div>
+
+      <!-- 中央の結び目（ひし形） -->
+      <div class="bowtie-knot">
+        <button id="healthBtn" class="health-button">
+          💓
+        </button>
+      </div>
+
+      <!-- 右側の蝶（三角形） -->
+      <div class="bowtie-wing right-wing">
+        <button id="playBtn" class="wing-button" disabled>
+          ▶<br><span>読み上げ</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- サーバー健康チェック結果 -->
+    <div id="healthStatus"></div>
+
+    <!-- 読み上げテキストボックス -->
+    <div class="text-display">
+      <textarea
+        id="transcriptText"
+        placeholder="音声認識結果、またはテキストを入力してください"
+      ></textarea>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

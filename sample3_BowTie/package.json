@@ -1,0 +1,18 @@
+{
+  "name": "bowtie",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo build skipped"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.1",
+    "@capacitor/cli": "^6.2.1",
+    "@capacitor/core": "^6.2.1"
+  },
+  "description": "```bash cd voicevox",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
