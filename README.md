@@ -16,7 +16,7 @@ java -version
 ### Setting Environment variables
 
 ```bash
-sudo vim ~/.bashrc
+vim ~/.bashrc
 ```
 
 Add the following at the end:
@@ -90,8 +90,8 @@ snap list android-studio
 ```
 
 ### Setting Environment variables
-```
-sudo vim ~/.bashrc
+```bash
+vim ~/.bashrc
 ```
 
 ```bash
